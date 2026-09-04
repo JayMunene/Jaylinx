@@ -1,0 +1,10 @@
+{
+  "description": "Connect customers with service providers by allowing users to describe their needs, which are then sent directly to the admin dashboard for efficient management.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
