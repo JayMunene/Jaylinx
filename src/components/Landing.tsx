@@ -199,7 +199,7 @@ export default function Landing({
       </header>
 
       {/* ─── HERO ─── */}
-      <section className="relative flex min-h-screen flex-col px-8 lg:px-14 xl:px-20">
+      <section className="relative flex min-h-[980px] flex-col px-8 lg:min-h-screen lg:px-14 xl:px-20">
         {/* Company label */}
         <div className="pt-24">
           <span
@@ -267,7 +267,7 @@ export default function Landing({
         </div>
 
         {/* Metrics strip */}
-        <div className="absolute inset-x-0 bottom-0 border-t border-white/8">
+        <div className="relative mt-10 border-t border-white/8 lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0">
           <div className="mx-auto flex max-w-[1380px] px-8 lg:px-14 xl:px-20">
             {INSTRUMENTS.map((inst, i) => (
               <div
