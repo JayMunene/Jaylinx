@@ -43,12 +43,6 @@ export default function Footer({
     <footer className="relative overflow-hidden border-t border-white/8 bg-canvas">
       <div className="relative mx-auto grid max-w-[1380px] grid-cols-2 gap-12 px-8 py-16 lg:grid-cols-4 lg:px-14 xl:px-20">
         <div className="col-span-2 lg:col-span-1">
-          <div
-            className="font-sans text-[11px] font-semibold uppercase text-white"
-            style={{ letterSpacing: "0.28em" }}
-          >
-            JAYLINX <span className="text-gold">·</span> GROUP
-          </div>
           <address className="mt-5 font-mono text-[11px] not-italic leading-[1.85] text-white/32">
             Nairobi, Kenya 00100
           </address>
