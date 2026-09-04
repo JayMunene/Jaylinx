@@ -7,10 +7,11 @@ import ProcessPage from "./components/ProcessPage";
 import PortfolioPage from "./components/PortfolioPage";
 import ContactPage from "./components/ContactPage";
 import DonatePage from "./components/DonatePage";
+import PricingPage from "./components/PricingPage";
 
 const ADMIN_PASS = "kemmy1234";
 
-type View = "site" | "admin" | "about" | "process" | "portfolio" | "contact" | "donate";
+type View = "site" | "admin" | "about" | "process" | "portfolio" | "contact" | "donate" | "pricing";
 
 export default function App() {
   const [view, setView] = useState<View>("site");
@@ -71,6 +72,9 @@ export default function App() {
       )}
       {view === "donate" && (
         <DonatePage onBack={() => navigate("site")} onRequest={() => openIntake()} onNavigate={navigate} />
+      )}
+      {view === "pricing" && (
+        <PricingPage onBack={() => navigate("site")} onRequest={openIntake} onNavigate={navigate} />
       )}
 
       <IntakeModal

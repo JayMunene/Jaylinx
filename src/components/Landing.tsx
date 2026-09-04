@@ -122,7 +122,7 @@ function AnimatedMetric({ value, delay }: { value: string; delay: number }) {
   return <span ref={metricRef}>{display}</span>;
 }
 
-type NavPage = "about" | "process" | "portfolio" | "contact" | "admin" | "donate";
+type NavPage = "about" | "process" | "portfolio" | "contact" | "admin" | "donate" | "pricing";
 
 export default function Landing({
   onRequest,
@@ -232,11 +232,11 @@ export default function Landing({
 
             <div className="mt-10 flex flex-wrap items-center gap-8">
               <button
-                onClick={() => onRequest()}
+                onClick={() => onNavigate("pricing")}
                 className="bg-gold px-7 py-3.5 font-mono text-[11px] uppercase text-canvas transition-colors hover:bg-gold-bright"
                 style={{ letterSpacing: "0.16em" }}
               >
-                Get a Free Quote →
+                View Pricing →
               </button>
               <button
                 onClick={() => sectionRef.current?.scrollIntoView({ behavior: "smooth" })}
