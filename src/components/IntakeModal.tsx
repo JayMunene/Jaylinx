@@ -55,9 +55,11 @@ export default function IntakeModal({
 
   if (!open) return null;
 
+  const phonePattern = /^\+\d{1,4}(?:\s\d{2,5}){2,3}$/;
+
   const valid =
     name.trim() &&
-    phone.trim() &&
+    phonePattern.test(phone.trim()) &&
     /.+@.+\..+/.test(email) &&
     projectDesc.trim().length > 10;
 
@@ -169,9 +171,11 @@ export default function IntakeModal({
                 <input
                   className={inputCls}
                   type="tel"
+                  inputMode="tel"
+                  pattern="^\+\d{1,4}(?:\s\d{2,5}){2,3}$"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="+254 712 345 678"
+                  placeholder="+1 415 555 2671"
                 />
               </Field>
 

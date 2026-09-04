@@ -46,17 +46,34 @@ export default function DonatePage({
           </p>
         </div>
 
-        <section className="mt-16 max-w-[620px] border border-white/10 bg-surface p-8 sm:p-12">
-          <div className="font-mono text-[10px] uppercase text-gold/70" style={{ letterSpacing: "0.2em" }}>
-            Send via M-Pesa
-          </div>
-          <div className="mt-5 font-mono text-[clamp(28px,6vw,52px)] font-bold tracking-[0.04em] text-white">
-            0759846829
-          </div>
-          <p className="mt-4 text-[13px] leading-[1.7] text-white/38">
-            Use the number above to send your contribution via M-Pesa. Thank you for supporting Jaylinx.
-          </p>
-        </section>
+        <div className="mt-16 grid max-w-[760px] gap-6 md:grid-cols-2">
+          <section className="border border-white/10 bg-surface p-8 sm:p-12">
+            <div className="font-mono text-[10px] uppercase text-gold/70" style={{ letterSpacing: "0.2em" }}>
+              Send via M-Pesa
+            </div>
+            <div className="mt-5 font-mono text-[clamp(28px,6vw,52px)] font-bold tracking-[0.04em] text-white">
+              0759846829
+            </div>
+            <p className="mt-4 text-[13px] leading-[1.7] text-white/38">
+              Use the number above to send your contribution via M-Pesa.
+            </p>
+          </section>
+
+          <section className="border border-white/10 bg-surface p-8 sm:p-12">
+            <div className="font-mono text-[10px] uppercase text-gold/70" style={{ letterSpacing: "0.2em" }}>
+              Send via PayPal
+            </div>
+            <a
+              href="mailto:jasonmunenekibicho@gmail.com?subject=Donation%20via%20PayPal"
+              className="mt-5 block font-mono text-[clamp(18px,3vw,28px)] font-bold tracking-[0.04em] text-white transition-colors hover:text-gold"
+            >
+              jasonmunenekibicho@gmail.com
+            </a>
+            <p className="mt-4 text-[13px] leading-[1.7] text-white/38">
+              Send your contribution by email and we’ll confirm the payment once it lands.
+            </p>
+          </section>
+        </div>
 
         <button
           onClick={onBack}
