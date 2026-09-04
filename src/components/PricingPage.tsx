@@ -13,7 +13,7 @@ type Tier = {
 };
 
 const TIERS: Tier[] = [
-  { number: "01", name: "Slow PC Tune-Up", scope: "Startup cleanup, driver updates, drive health and malware scan.", price: "2,500 KSh", timing: "30 minutes", bestFor: "A sluggish laptop or desktop" },
+  { number: "01", name: "Slow PC Tune-Up", scope: "Remote AnyDesk session: startup cleanup, driver updates, drive health and malware scan.", price: "2,500 KSh", timing: "30 minutes", bestFor: "A sluggish laptop or desktop" },
   { number: "02", name: "Quick Tech Fix", scope: "One bug fix, webhook repair, layout correction or tool connection.", price: "5,000–10,000 KSh", timing: "Within 24 hours", bestFor: "Local shops and solo businesses" },
   { number: "03", name: "Tech Stack Audit", scope: "A focused review of subscriptions, tools and easy automation wins.", price: "15,000 KSh", timing: "1–2 days", bestFor: "Businesses cutting software costs" },
   { number: "04", name: "Starter Website", scope: "A refined one-page site with WhatsApp, contact form and mobile QA.", price: "25,000 KSh", timing: "7–10 working days", bestFor: "Service providers and creators" },
