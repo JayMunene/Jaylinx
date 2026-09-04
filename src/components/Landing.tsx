@@ -199,7 +199,7 @@ export default function Landing({
       </header>
 
       {/* ─── HERO ─── */}
-      <section className="relative flex min-h-[980px] flex-col px-8 lg:min-h-screen lg:px-14 xl:px-20">
+      <section className="relative flex min-h-[900px] flex-col px-8 lg:min-h-screen lg:px-14 xl:px-20">
         {/* Company label */}
         <div className="pt-24">
           <span
