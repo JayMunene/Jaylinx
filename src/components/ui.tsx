@@ -92,5 +92,6 @@ export const SERVICE_TYPES = [
   "Website",
   "Web Application / Platform",
   "Cost & Systems Review",
+  "Desktop/Laptop Tweaking (Optimization)",
   "Other",
 ];
