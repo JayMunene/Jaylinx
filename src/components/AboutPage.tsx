@@ -50,7 +50,7 @@ export default function AboutPage({
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
           <div>
             <p className="text-[16px] leading-[1.8] text-white/55">
-              Jaylinx Group is a Swiss-based software development studio specialising in
+              Jaylinx Group is a Kenyan/Cypress-based software development studio specialising in
               mobile apps, web platforms, and digital systems for businesses of all sizes.
               Founded with the belief that good technology should be accessible — not just
               to big corporations — we work directly with business owners to bring their
