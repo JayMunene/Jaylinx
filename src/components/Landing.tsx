@@ -200,16 +200,6 @@ export default function Landing({
 
       {/* ─── HERO ─── */}
       <section className="relative flex min-h-[900px] flex-col px-8 lg:min-h-screen lg:px-14 xl:px-20">
-        {/* Company label */}
-        <div className="pt-24">
-          <span
-            className="font-mono text-[10px] uppercase text-white/30"
-            style={{ letterSpacing: "0.32em" }}
-          >
-            Jaylinx Group
-          </span>
-        </div>
-
         {/* Main content */}
         <div className="flex flex-1 items-center pb-28">
           <div className="grid w-full max-w-[1380px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
