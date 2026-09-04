@@ -7,6 +7,8 @@
 *.png                filter=lfs diff=lfs merge=lfs -text
 *.jpg                filter=lfs diff=lfs merge=lfs -text
 *.jpeg               filter=lfs diff=lfs merge=lfs -text
+# Keep the primary site logo available to Vercel as a regular binary asset.
+src/imports/_EA7A32E7-9DFC-493C-8B79-4AF038894C97_-Photoroom.png -filter -diff -merge
 *.gif                filter=lfs diff=lfs merge=lfs -text
 *.bmp                filter=lfs diff=lfs merge=lfs -text
 *.tiff               filter=lfs diff=lfs merge=lfs -text
