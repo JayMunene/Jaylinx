@@ -160,13 +160,13 @@ export default function Landing({
   }, []);
 
   return (
-    <div ref={pageRef} className="min-h-full bg-canvas text-white">
+    <div ref={pageRef} className="min-h-full overflow-x-hidden bg-canvas text-white">
       {/* ─── HEADER ─── */}
       <header
         className="fixed inset-x-0 top-0 z-50 bg-transparent pointer-events-none"
         style={{ opacity: headerOpacity, transition: "opacity 0.05s linear" }}
       >
-        <div className="pointer-events-auto mx-auto flex h-12 max-w-[1380px] items-center justify-between px-8 lg:px-14 xl:px-20">
+        <div className="pointer-events-auto mx-auto flex h-12 max-w-[1380px] items-center justify-between px-5 sm:px-8 lg:px-14 xl:px-20">
           {/* Logo — top left */}
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="shrink-0">
             <img src={logo} alt="Jaylinx Group" className="h-9 w-auto object-contain" />
@@ -199,7 +199,7 @@ export default function Landing({
       </header>
 
       {/* ─── HERO ─── */}
-      <section className="relative flex min-h-[900px] flex-col px-8 lg:min-h-screen lg:px-14 xl:px-20">
+      <section className="relative flex min-h-[900px] flex-col px-5 sm:px-8 lg:min-h-screen lg:px-14 xl:px-20">
         {/* Main content */}
         <div className="flex flex-1 items-center pb-28">
           <div className="grid w-full max-w-[1380px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
@@ -285,7 +285,7 @@ export default function Landing({
       </section>
 
       {/* ─── QUICK QUOTE ─── */}
-      <section className="border-b border-white/6 bg-band px-8 py-8 lg:px-14 xl:px-20">
+      <section className="border-b border-white/6 bg-band px-5 py-8 sm:px-8 lg:px-14 xl:px-20">
         <div className="mx-auto max-w-[1380px]">
           <div
             className="mb-5 font-mono text-[9px] uppercase text-white/22"
@@ -328,7 +328,7 @@ export default function Landing({
       <section
         id="services"
         ref={sectionRef}
-        className="px-8 pb-8 pt-20 lg:px-14 xl:px-20"
+        className="px-5 pb-8 pt-20 sm:px-8 lg:px-14 xl:px-20"
       >
         <div className="mx-auto max-w-[1380px]">
           <div className="mb-12 flex items-baseline justify-between border-b border-white/8 pb-4">
@@ -381,7 +381,7 @@ export default function Landing({
       </section>
 
       {/* ─── WHY US + HOW IT WORKS ─── */}
-      <section className="px-8 pb-24 pt-20 lg:px-14 xl:px-20">
+      <section className="px-5 pb-24 pt-20 sm:px-8 lg:px-14 xl:px-20">
         <div className="mx-auto max-w-[1380px]">
           <div className="mb-12 flex items-baseline border-b border-white/8 pb-4">
             <span
