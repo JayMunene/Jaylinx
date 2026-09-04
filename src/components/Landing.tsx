@@ -136,6 +136,7 @@ export default function Landing({
   onNavigate: (page: NavPage) => void;
 }) {
   const [serviceType, setServiceType] = useState(SERVICE_TYPES[0]);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [headerOpacity, setHeaderOpacity] = useState(1);
   const sectionRef = useRef<HTMLDivElement>(null);
   const pageRef = useRef<HTMLDivElement>(null);
@@ -166,7 +167,7 @@ export default function Landing({
         className="fixed inset-x-0 top-0 z-50 bg-transparent pointer-events-none"
         style={{ opacity: headerOpacity, transition: "opacity 0.05s linear" }}
       >
-        <div className="pointer-events-auto mx-auto flex h-12 max-w-[1380px] items-center justify-between px-5 sm:px-8 lg:px-14 xl:px-20">
+        <div className="pointer-events-auto relative mx-auto flex h-12 max-w-[1380px] items-center justify-between px-5 sm:px-8 lg:px-14 xl:px-20">
           {/* Logo — top left */}
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="shrink-0">
             <img src={logo} alt="Jaylinx Group" className="h-9 w-auto object-contain" />
@@ -188,6 +189,14 @@ export default function Landing({
 
           <div className="flex items-center gap-6">
             <button
+              onClick={() => setMobileMenuOpen((open) => !open)}
+              className="border border-white/15 px-3 py-2 font-mono text-[9px] uppercase text-white/55 transition-colors hover:border-white/35 hover:text-white lg:hidden"
+              aria-expanded={mobileMenuOpen}
+              aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
+            >
+              {mobileMenuOpen ? "Close" : "Menu"}
+            </button>
+            <button
               onClick={() => onNavigate("donate")}
               className="bg-gold px-4 py-2 font-mono text-[10px] uppercase text-canvas transition-colors hover:bg-gold-bright"
               style={{ letterSpacing: "0.14em" }}
@@ -195,6 +204,24 @@ export default function Landing({
               DONATE
             </button>
           </div>
+
+          {mobileMenuOpen && (
+            <nav className="absolute inset-x-5 top-14 border border-white/10 bg-surface p-4 sm:inset-x-8 lg:hidden">
+              {(["about", "process", "portfolio", "contact"] as const).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onNavigate(page);
+                  }}
+                  className="block w-full border-b border-white/8 py-3 text-left font-mono text-[10px] uppercase text-white/55 last:border-b-0 hover:text-white"
+                  style={{ letterSpacing: "0.2em" }}
+                >
+                  {page === "about" ? "About Us" : page === "process" ? "Our Process" : page.charAt(0).toUpperCase() + page.slice(1)}
+                </button>
+              ))}
+            </nav>
+          )}
         </div>
       </header>
 
