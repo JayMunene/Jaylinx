@@ -13,14 +13,14 @@ type Tier = {
 };
 
 const TIERS: Tier[] = [
-  { number: "01", name: "Slow PC Tune-Up", scope: "Remote AnyDesk session: startup cleanup, driver updates, drive health and malware scan.", price: "2,500 KSh", timing: "30 minutes", bestFor: "A sluggish laptop or desktop" },
-  { number: "02", name: "Quick Tech Fix", scope: "One bug fix, webhook repair, layout correction or tool connection.", price: "5,000–10,000 KSh", timing: "Within 24 hours", bestFor: "Local shops and solo businesses" },
-  { number: "03", name: "Tech Stack Audit", scope: "A focused review of subscriptions, tools and easy automation wins.", price: "15,000 KSh", timing: "1–2 days", bestFor: "Businesses cutting software costs" },
-  { number: "04", name: "Starter Website", scope: "A refined one-page site with WhatsApp, contact form and mobile QA.", price: "25,000 KSh", timing: "7–10 working days", bestFor: "Service providers and creators" },
-  { number: "05", name: "Business Website", scope: "A 4–6 page site with CMS, SEO setup and blog or catalogue structure.", price: "45,000–75,000 KSh", timing: "3–4 weeks", bestFor: "Established businesses and clinics" },
-  { number: "06", name: "Workflow Automation", scope: "M-Pesa, WhatsApp, CRM and inventory systems with logging and alerts.", price: "75,000–125,000 KSh", timing: "2–4 weeks", bestFor: "Retail, clinics and e-commerce" },
-  { number: "07", name: "Mobile App MVP", scope: "Cross-platform app with login, notifications and a basic payment flow.", price: "150,000–250,000 KSh", timing: "5–7 weeks", bestFor: "Founders validating an idea" },
-  { number: "08", name: "B2B SaaS Platform", scope: "Multi-user roles, database, billing and custom business logic.", price: "250,000–500,000+ KSh", timing: "8–12 weeks", bestFor: "Growing enterprises" },
+  { number: "01", name: "Slow PC Tune-Up", scope: "Remote AnyDesk session: startup cleanup, driver updates, drive health and malware scan.", price: "$19", timing: "30 minutes", bestFor: "A sluggish laptop or desktop" },
+  { number: "02", name: "Quick Tech Fix", scope: "One bug fix, webhook repair, layout correction or tool connection.", price: "$40–$80", timing: "Within 24 hours", bestFor: "Local shops and solo businesses" },
+  { number: "03", name: "Tech Stack Audit", scope: "A focused review of subscriptions, tools and easy automation wins.", price: "$115", timing: "1–2 days", bestFor: "Businesses cutting software costs" },
+  { number: "04", name: "Starter Website", scope: "A refined one-page site with WhatsApp, contact form and mobile QA.", price: "$190", timing: "7–10 working days", bestFor: "Service providers and creators" },
+  { number: "05", name: "Business Website", scope: "A 4–6 page site with CMS, SEO setup and blog or catalogue structure.", price: "$350–$580", timing: "3–4 weeks", bestFor: "Established businesses and clinics" },
+  { number: "06", name: "Workflow Automation", scope: "M-Pesa, WhatsApp, CRM and inventory systems with logging and alerts.", price: "$580–$960", timing: "2–4 weeks", bestFor: "Retail, clinics and e-commerce" },
+  { number: "07", name: "Mobile App MVP", scope: "Cross-platform app with login, notifications and a basic payment flow.", price: "$1,150–$1,925", timing: "5–7 weeks", bestFor: "Founders validating an idea" },
+  { number: "08", name: "B2B SaaS Platform", scope: "Multi-user roles, database, billing and custom business logic.", price: "$1,925–$3,850+", timing: "8–12 weeks", bestFor: "Growing enterprises" },
 ];
 
 const PRINCIPLES = [
@@ -64,7 +64,7 @@ export default function PricingPage({
         <section className="mt-20">
           <div className="mb-5 flex items-end justify-between border-b border-white/8 pb-4">
             <span className="font-mono text-[9px] uppercase text-white/28" style={{ letterSpacing: "0.24em" }}>Services & investment</span>
-            <span className="hidden font-mono text-[9px] uppercase text-white/20 sm:block" style={{ letterSpacing: "0.18em" }}>Prices in KSh</span>
+            <span className="hidden font-mono text-[9px] uppercase text-white/20 sm:block" style={{ letterSpacing: "0.18em" }}>Indicative prices in USD</span>
           </div>
           <div className="border-t border-white/8">
             {TIERS.map((tier) => (
@@ -86,6 +86,7 @@ export default function PricingPage({
               </button>
             ))}
           </div>
+          <p className="mt-4 font-mono text-[9px] uppercase text-white/20" style={{ letterSpacing: "0.12em" }}>Final pricing is confirmed after scope, content and technical requirements are reviewed.</p>
         </section>
 
         <section className="mt-24">
