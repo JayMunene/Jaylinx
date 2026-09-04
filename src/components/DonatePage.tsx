@@ -51,7 +51,7 @@ export default function DonatePage({
             <div className="font-mono text-[10px] uppercase text-gold/70" style={{ letterSpacing: "0.2em" }}>
               Send via M-Pesa
             </div>
-            <div className="mt-5 font-mono text-[clamp(28px,6vw,52px)] font-bold tracking-[0.04em] text-white">
+            <div className="mt-5 whitespace-nowrap font-mono text-[clamp(24px,4vw,42px)] font-bold tracking-[0.04em] text-white">
               0759846829
             </div>
             <p className="mt-4 text-[13px] leading-[1.7] text-white/38">
@@ -65,7 +65,7 @@ export default function DonatePage({
             </div>
             <a
               href="mailto:jasonmunenekibicho@gmail.com?subject=Donation%20via%20PayPal"
-              className="mt-5 block break-all font-mono text-[clamp(16px,2.4vw,28px)] font-bold leading-tight tracking-[0.04em] text-white transition-colors hover:text-gold"
+              className="mt-5 block whitespace-nowrap font-mono text-[clamp(12px,1vw,14px)] font-bold tracking-normal text-white transition-colors hover:text-gold"
             >
               jasonmunenekibicho@gmail.com
             </a>
