@@ -10,6 +10,8 @@ const INSTRUMENTS = [
   { value: "2+", label: "Years in Business" },
 ];
 
+const HERO_IMAGE = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFiVv9lyBRZnckbpV_ByfSzL98tHNGa-rXB6C6g-fUoiGMgJON7-FEJrDw&s=10";
+
 const SERVICES = [
   {
     num: "01",
@@ -210,41 +212,56 @@ export default function Landing({
 
         {/* Main content */}
         <div className="flex flex-1 items-center pb-28">
-          <div className="w-full max-w-[1380px]">
-            <h1
-              className="font-black uppercase leading-[0.9] text-white"
-              style={{
-                fontSize: "clamp(52px, 7.5vw, 116px)",
-                letterSpacing: "-0.04em",
-              }}
-            >
-              Your idea.
-              <br />
-              <span className="text-white/55">Our code.</span>
-            </h1>
-
-            <div className="my-7 h-[2px] bg-gold" style={{ width: "min(100%, 300px)" }} />
-
-            <p className="max-w-[460px] text-[16px] leading-[1.75] text-white/50">
-              We build apps, websites, and digital platforms for businesses of
-              all sizes. You describe what you need — we take care of the rest.
-            </p>
-
-            <div className="mt-10 flex flex-wrap items-center gap-8">
-              <button
-                onClick={() => onNavigate("pricing")}
-                className="bg-gold px-7 py-3.5 font-mono text-[11px] uppercase text-canvas transition-colors hover:bg-gold-bright"
-                style={{ letterSpacing: "0.16em" }}
+          <div className="grid w-full max-w-[1380px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+            <div>
+              <h1
+                className="font-black uppercase leading-[0.9] text-white"
+                style={{
+                  fontSize: "clamp(52px, 7.5vw, 116px)",
+                  letterSpacing: "-0.04em",
+                }}
               >
-                View Pricing →
-              </button>
-              <button
-                onClick={() => sectionRef.current?.scrollIntoView({ behavior: "smooth" })}
-                className="font-mono text-[11px] uppercase text-white/28 transition-colors hover:text-white/60"
-                style={{ letterSpacing: "0.16em" }}
-              >
-                See What We Build ↓
-              </button>
+                Your idea.
+                <br />
+                <span className="text-white/55">Our code.</span>
+              </h1>
+
+              <div className="my-7 h-[2px] bg-gold" style={{ width: "min(100%, 300px)" }} />
+
+              <p className="max-w-[460px] text-[16px] leading-[1.75] text-white/50">
+                We build apps, websites, and digital platforms for businesses of
+                all sizes. You describe what you need — we take care of the rest.
+              </p>
+
+              <div className="mt-10 flex flex-wrap items-center gap-8">
+                <button
+                  onClick={() => onNavigate("pricing")}
+                  className="bg-gold px-7 py-3.5 font-mono text-[11px] uppercase text-canvas transition-colors hover:bg-gold-bright"
+                  style={{ letterSpacing: "0.16em" }}
+                >
+                  View Pricing →
+                </button>
+                <button
+                  onClick={() => sectionRef.current?.scrollIntoView({ behavior: "smooth" })}
+                  className="font-mono text-[11px] uppercase text-white/28 transition-colors hover:text-white/60"
+                  style={{ letterSpacing: "0.16em" }}
+                >
+                  See What We Build ↓
+                </button>
+              </div>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-[520px] lg:justify-self-end">
+              <div className="absolute -inset-5 border border-gold/15" aria-hidden />
+              <img
+                src={HERO_IMAGE}
+                alt="Jaylinx Group creative technology work"
+                className="relative aspect-[4/3] w-full object-cover brightness-90 contrast-110 grayscale-[15%]"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute bottom-4 left-4 border border-white/20 bg-canvas/80 px-3 py-2 font-mono text-[9px] uppercase text-gold/75" style={{ letterSpacing: "0.18em" }}>
+                Built for what is next
+              </div>
             </div>
           </div>
         </div>
