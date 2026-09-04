@@ -13,15 +13,14 @@ type Tier = {
 };
 
 const TIERS: Tier[] = [
-  { number: "01", name: "Slow PC Tune-Up", scope: "Remote AnyDesk session or physical booking: startup cleanup, driver updates, drive health and malware scan. Typical performance boost: 30 to 65%. Write us a quote.", price: "$19", timing: "30 minutes", bestFor: "A sluggish laptop or desktop" },
-  { number: "02", name: "Desktop/Laptop Tweaking (Optimization)", scope: "Targeted desktop or laptop optimization for faster startup, smoother apps, cleaner storage and better day-to-day performance.", price: "Quote", timing: "By assessment", bestFor: "Desktop and laptop owners" },
-  { number: "03", name: "Website Revamp & Minor Frontend Changes", scope: "Refresh an existing website with layout refinements, responsive fixes and polished frontend details.", price: "$40–$180", timing: "1–3 days", bestFor: "Businesses improving an existing site" },
-  { number: "04", name: "Tech Stack Audit", scope: "A focused review of subscriptions, tools and easy automation wins.", price: "$115", timing: "1–2 days", bestFor: "Businesses cutting software costs" },
-  { number: "05", name: "Starter Website", scope: "A refined one-page site with WhatsApp, contact form and mobile QA.", price: "$190", timing: "7–10 working days", bestFor: "Service providers and creators" },
-  { number: "06", name: "Business Website", scope: "A 4–6 page site with CMS, SEO setup and blog or catalogue structure.", price: "$350–$580", timing: "3–4 weeks", bestFor: "Established businesses and clinics" },
-  { number: "07", name: "Workflow Automation", scope: "M-Pesa, WhatsApp, CRM and inventory systems with logging and alerts.", price: "$580–$960", timing: "2–4 weeks", bestFor: "Retail, clinics and e-commerce" },
-  { number: "08", name: "Mobile App MVP", scope: "Cross-platform app with login, notifications and a basic payment flow.", price: "$1,150–$1,925", timing: "5–7 weeks", bestFor: "Founders validating an idea" },
-  { number: "09", name: "B2B SaaS Platform", scope: "Multi-user roles, database, billing and custom business logic.", price: "$1,925–$3,850+", timing: "8–12 weeks", bestFor: "Growing enterprises" },
+  { number: "01", name: "PC Tune-Up & Optimization", scope: "Remote AnyDesk session or physical booking for desktop and laptop tweaking: startup cleanup, driver updates, drive health, malware scan and smoother day-to-day performance. Typical boost: 30 to 65%. Write us a quote.", price: "$19+", timing: "By assessment", bestFor: "Sluggish desktops and laptops" },
+  { number: "02", name: "Website Revamp & Minor Frontend Changes", scope: "Refresh an existing website with layout refinements, responsive fixes and polished frontend details.", price: "$40–$180", timing: "1–3 days", bestFor: "Businesses improving an existing site" },
+  { number: "03", name: "Tech Stack Audit", scope: "A focused review of subscriptions, tools and easy automation wins.", price: "$115", timing: "1–2 days", bestFor: "Businesses cutting software costs" },
+  { number: "04", name: "Starter Website", scope: "A refined one-page site with WhatsApp, contact form and mobile QA.", price: "$190", timing: "7–10 working days", bestFor: "Service providers and creators" },
+  { number: "05", name: "Business Website", scope: "A 4–6 page site with CMS, SEO setup and blog or catalogue structure.", price: "$350–$580", timing: "3–4 weeks", bestFor: "Established businesses and clinics" },
+  { number: "06", name: "Workflow Automation", scope: "M-Pesa, WhatsApp, CRM and inventory systems with logging and alerts.", price: "$580–$960", timing: "2–4 weeks", bestFor: "Retail, clinics and e-commerce" },
+  { number: "07", name: "Mobile App MVP", scope: "Cross-platform app with login, notifications and a basic payment flow.", price: "$1,150–$1,925", timing: "5–7 weeks", bestFor: "Founders validating an idea" },
+  { number: "08", name: "B2B SaaS Platform", scope: "Multi-user roles, database, billing and custom business logic.", price: "$1,925–$3,850+", timing: "8–12 weeks", bestFor: "Growing enterprises" },
 ];
 
 const PRINCIPLES = [
