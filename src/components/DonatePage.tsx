@@ -65,7 +65,7 @@ export default function DonatePage({
             </div>
             <a
               href="mailto:jasonmunenekibicho@gmail.com?subject=Donation%20via%20PayPal"
-              className="mt-5 block font-mono text-[clamp(18px,3vw,28px)] font-bold tracking-[0.04em] text-white transition-colors hover:text-gold"
+              className="mt-5 block break-all font-mono text-[clamp(16px,2.4vw,28px)] font-bold leading-tight tracking-[0.04em] text-white transition-colors hover:text-gold"
             >
               jasonmunenekibicho@gmail.com
             </a>
