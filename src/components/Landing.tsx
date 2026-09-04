@@ -268,11 +268,11 @@ export default function Landing({
 
         {/* Metrics strip */}
         <div className="relative mt-10 border-t border-white/8 lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0">
-          <div className="mx-auto flex max-w-[1380px] px-8 lg:px-14 xl:px-20">
+          <div className="mx-auto grid max-w-[1380px] grid-cols-2 lg:flex lg:px-14 xl:px-20">
             {INSTRUMENTS.map((inst, i) => (
               <div
                 key={inst.label}
-                className={`flex-1 py-5 ${i > 0 ? "border-l border-white/8 pl-6 lg:pl-8" : ""} ${i < INSTRUMENTS.length - 1 ? "pr-6 lg:pr-8" : ""}`}
+                className={`min-w-0 border-b border-white/8 px-4 py-5 even:border-l lg:flex-1 lg:border-b-0 lg:px-0 ${i > 0 ? "lg:border-l lg:pl-6 xl:pl-8" : ""} ${i < INSTRUMENTS.length - 1 ? "lg:pr-6 xl:pr-8" : ""}`}
               >
                 <div
                   className="font-black leading-none text-white"
@@ -285,8 +285,8 @@ export default function Landing({
                   <AnimatedMetric value={inst.value} delay={i * 250} />
                 </div>
                 <div
-                  className="mt-1.5 font-mono uppercase text-white/28"
-                  style={{ fontSize: "9px", letterSpacing: "0.2em" }}
+                  className="mt-1.5 max-w-full whitespace-normal font-mono uppercase leading-[1.25] text-white/28"
+                  style={{ fontSize: "clamp(7px, 1.8vw, 9px)", letterSpacing: "0.14em" }}
                 >
                   {inst.label}
                 </div>
