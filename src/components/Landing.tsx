@@ -74,6 +74,7 @@ const HOW_IT_WORKS = [
 function AnimatedMetric({ value, delay }: { value: string; delay: number }) {
   const targets = value.match(/\d+/g)?.map(Number) ?? [];
   const [numbers, setNumbers] = useState(targets.map(() => 0));
+  const metricRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -84,9 +85,11 @@ function AnimatedMetric({ value, delay }: { value: string; delay: number }) {
 
     let frame = 0;
     let timeout = 0;
+    let observer: IntersectionObserver | undefined;
+
     const start = () => {
       const startedAt = performance.now();
-      const duration = 1400;
+      const duration = 2600;
 
       const tick = (now: number) => {
         const progress = Math.min((now - startedAt) / duration, 1);
@@ -98,17 +101,25 @@ function AnimatedMetric({ value, delay }: { value: string; delay: number }) {
       frame = requestAnimationFrame(tick);
     };
 
-    timeout = window.setTimeout(start, delay);
+    observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        observer?.disconnect();
+        timeout = window.setTimeout(start, delay);
+      }
+    }, { threshold: 0.6 });
+    if (metricRef.current) observer.observe(metricRef.current);
+
     return () => {
       window.clearTimeout(timeout);
       cancelAnimationFrame(frame);
+      observer?.disconnect();
     };
   }, [delay, value]);
 
   let numberIndex = 0;
   const display = value.replace(/\d+/g, () => String(numbers[numberIndex++] ?? 0));
 
-  return <>{display}</>;
+  return <span ref={metricRef}>{display}</span>;
 }
 
 type NavPage = "about" | "process" | "portfolio" | "contact" | "admin";
@@ -254,7 +265,7 @@ export default function Landing({
                     letterSpacing: "-0.03em",
                   }}
                 >
-                  <AnimatedMetric value={inst.value} delay={i * 120} />
+                  <AnimatedMetric value={inst.value} delay={i * 250} />
                 </div>
                 <div
                   className="mt-1.5 font-mono uppercase text-white/28"
