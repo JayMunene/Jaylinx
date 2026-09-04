@@ -223,10 +223,7 @@ export default function Landing({
               >
                 Your idea.
                 <br />
-                <span className="text-white/55">Our code.</span>
-              </h1>
-
-              <div className="my-7 h-[2px] bg-gold" style={{ width: "min(100%, 300px)" }} />
+              <span className="text-white/55">We code.</span>
 
               <p className="max-w-[460px] text-[16px] leading-[1.75] text-white/50">
                 We build apps, websites, and digital platforms for businesses of
