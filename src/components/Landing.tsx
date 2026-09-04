@@ -6,7 +6,7 @@ import logo from "@/imports/_EA7A32E7-9DFC-493C-8B79-4AF038894C97_-Photoroom.png
 const INSTRUMENTS = [
   { value: "50+", label: "Projects Delivered" },
   { value: "98%", label: "Client Satisfaction" },
-  { value: "3–6mo", label: "Average Delivery" },
+  { value: "2 to 8wks", label: "Average Delivery" },
   { value: "2+", label: "Years in Business" },
 ];
 
