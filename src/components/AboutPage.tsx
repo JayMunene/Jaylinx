@@ -75,7 +75,6 @@ export default function AboutPage({
               { label: "Headquarters", value: "Nairobi, Kenya" },
               { label: "Projects Delivered", value: "50+" },
               { label: "Client Satisfaction", value: "98%" },
-              { label: "Team Size", value: "12 specialists" },
               { label: "Industries Served", value: "Retail, Finance, Health, Logistics" },
             ].map((row, i) => (
               <div
