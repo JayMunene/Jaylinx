@@ -32,9 +32,9 @@ export default function Footer({
       h: "Get Started",
       items: [
         { label: "Get a Free Quote", action: () => onRequest() },
-        { label: "Book a Call", action: () => onNavigate("contact") },
-        { label: "Send a Message", action: () => onNavigate("contact") },
-        { label: "Partner With Us", action: () => window.location.href = "mailto:jaylinxgroup@gmail.com?subject=Partnership%20Enquiry" },
+        { label: "Book a Call", action: () => { window.location.href = "mailto:jaylinxgroup@gmail.com?subject=Book%20a%20Call"; } },
+        { label: "Send a Message", action: () => { window.location.href = "mailto:jaylinxgroup@gmail.com?subject=Project%20Enquiry"; } },
+        { label: "Partner With Us", action: () => { window.location.href = "mailto:jaylinxgroup@gmail.com?subject=Partnership%20Enquiry"; } },
       ],
     },
   ];
