@@ -71,6 +71,46 @@ const HOW_IT_WORKS = [
   },
 ];
 
+function AnimatedMetric({ value, delay }: { value: string; delay: number }) {
+  const targets = value.match(/\d+/g)?.map(Number) ?? [];
+  const [numbers, setNumbers] = useState(targets.map(() => 0));
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion || targets.length === 0) {
+      setNumbers(targets);
+      return;
+    }
+
+    let frame = 0;
+    let timeout = 0;
+    const start = () => {
+      const startedAt = performance.now();
+      const duration = 1400;
+
+      const tick = (now: number) => {
+        const progress = Math.min((now - startedAt) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setNumbers(targets.map((target) => Math.round(target * eased)));
+        if (progress < 1) frame = requestAnimationFrame(tick);
+      };
+
+      frame = requestAnimationFrame(tick);
+    };
+
+    timeout = window.setTimeout(start, delay);
+    return () => {
+      window.clearTimeout(timeout);
+      cancelAnimationFrame(frame);
+    };
+  }, [delay, value]);
+
+  let numberIndex = 0;
+  const display = value.replace(/\d+/g, () => String(numbers[numberIndex++] ?? 0));
+
+  return <>{display}</>;
+}
+
 type NavPage = "about" | "process" | "portfolio" | "contact" | "admin";
 
 export default function Landing({
@@ -214,7 +254,7 @@ export default function Landing({
                     letterSpacing: "-0.03em",
                   }}
                 >
-                  {inst.value}
+                  <AnimatedMetric value={inst.value} delay={i * 120} />
                 </div>
                 <div
                   className="mt-1.5 font-mono uppercase text-white/28"
