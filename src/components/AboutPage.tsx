@@ -71,7 +71,7 @@ export default function AboutPage({
 
           <div className="space-y-0">
             {[
-              { label: "Founded", value: "2019" },
+              { label: "Founded", value: "2024" },
               { label: "Headquarters", value: "Nairobi, Kenya" },
               { label: "Projects Delivered", value: "50+" },
               { label: "Client Satisfaction", value: "98%" },
