@@ -2,6 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
+import logo from './imports/_EA7A32E7-9DFC-493C-8B79-4AF038894C97_-Photoroom.png'
+
+const favicon = document.createElement('link')
+favicon.rel = 'icon'
+favicon.type = 'image/png'
+favicon.href = logo
+document.head.appendChild(favicon)
 
 // React reads window.$$typeof across frames to verify element integrity.
 // In cross-origin iframe environments (e.g. Figma Make preview) the browser
