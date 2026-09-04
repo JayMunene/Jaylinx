@@ -228,7 +228,7 @@ export default function Landing({
       {/* ─── HERO ─── */}
       <section className="relative flex min-h-[900px] flex-col px-5 sm:px-8 lg:min-h-screen lg:px-14 xl:px-20">
         {/* Main content */}
-        <div className="flex flex-1 items-center pb-28">
+        <div className="flex flex-1 items-center pb-28 pt-20 lg:pt-0">
           <div className="grid w-full max-w-[1380px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
             <div>
               <h1
