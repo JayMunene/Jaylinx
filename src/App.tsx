@@ -6,10 +6,11 @@ import AboutPage from "./components/AboutPage";
 import ProcessPage from "./components/ProcessPage";
 import PortfolioPage from "./components/PortfolioPage";
 import ContactPage from "./components/ContactPage";
+import DonatePage from "./components/DonatePage";
 
 const ADMIN_PASS = "kemmy1234";
 
-type View = "site" | "admin" | "about" | "process" | "portfolio" | "contact";
+type View = "site" | "admin" | "about" | "process" | "portfolio" | "contact" | "donate";
 
 export default function App() {
   const [view, setView] = useState<View>("site");
@@ -67,6 +68,9 @@ export default function App() {
       )}
       {view === "contact" && (
         <ContactPage onBack={() => navigate("site")} onRequest={openIntake} onNavigate={navigate} />
+      )}
+      {view === "donate" && (
+        <DonatePage onBack={() => navigate("site")} onRequest={() => openIntake()} onNavigate={navigate} />
       )}
 
       <IntakeModal

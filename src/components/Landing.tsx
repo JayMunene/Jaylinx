@@ -122,7 +122,7 @@ function AnimatedMetric({ value, delay }: { value: string; delay: number }) {
   return <span ref={metricRef}>{display}</span>;
 }
 
-type NavPage = "about" | "process" | "portfolio" | "contact" | "admin";
+type NavPage = "about" | "process" | "portfolio" | "contact" | "admin" | "donate";
 
 export default function Landing({
   onRequest,
@@ -186,11 +186,11 @@ export default function Landing({
 
           <div className="flex items-center gap-6">
             <button
-              onClick={() => onRequest()}
+              onClick={() => onNavigate("donate")}
               className="bg-gold px-4 py-2 font-mono text-[10px] uppercase text-canvas transition-colors hover:bg-gold-bright"
               style={{ letterSpacing: "0.14em" }}
             >
-              GET A QUOTE
+              DONATE
             </button>
           </div>
         </div>
