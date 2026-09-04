@@ -41,19 +41,6 @@ export default function Footer({
 
   return (
     <footer className="relative overflow-hidden border-t border-white/8 bg-canvas">
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 select-none font-black uppercase leading-none text-white"
-        style={{
-          fontSize: "clamp(80px, 17vw, 260px)",
-          opacity: 0.024,
-          letterSpacing: "-0.04em",
-          transform: "translateY(28%)",
-        }}
-        aria-hidden
-      >
-        JAYLINX
-      </div>
-
       <div className="relative mx-auto grid max-w-[1380px] grid-cols-2 gap-12 px-8 py-16 lg:grid-cols-4 lg:px-14 xl:px-20">
         <div className="col-span-2 lg:col-span-1">
           <div
