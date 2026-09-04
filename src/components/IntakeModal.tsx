@@ -161,7 +161,7 @@ export default function IntakeModal({
                   className={inputCls}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="Jane Doe"
+                  placeholder="Amina K."
                 />
               </Field>
 
@@ -171,7 +171,7 @@ export default function IntakeModal({
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="+1 555 000 0000"
+                  placeholder="+254 712 345 678"
                 />
               </Field>
 
@@ -181,7 +181,7 @@ export default function IntakeModal({
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="jane@company.com"
+                  placeholder="hello@brandname.com"
                 />
               </Field>
 
@@ -204,7 +204,7 @@ export default function IntakeModal({
                   className={`${inputCls} min-h-[140px] resize-y pt-2.5 leading-[1.65]`}
                   value={projectDesc}
                   onChange={(e) => setProjectDesc(e.target.value)}
-                  placeholder="Tell us what you want to build, who it's for, and anything else that's important to you. Don't worry about the technical details — just describe it in your own words."
+                  placeholder="We need a customer portal for our Nairobi-based team, with booking, payments, and reporting."
                 />
               </Field>
 
