@@ -90,11 +90,11 @@ export default function PricingPage({
             <div className="border-t border-white/10 pt-5">
               <div className="flex items-end justify-between">
                 <div>
-                  <div className="font-mono text-[9px] uppercase text-white/28" style={{ letterSpacing: "0.18em" }}>Typical range</div>
-                  <div className="mt-2 font-mono text-[23px] text-white">$19 <span className="text-white/25">—</span> $3.8k+</div>
+                  <div className="font-mono text-[9px] uppercase text-white/28" style={{ letterSpacing: "0.18em" }}>Typical delivery</div>
+                  <div className="mt-2 font-mono text-[23px] text-white">1 day <span className="text-white/25">—</span> 12 wks</div>
                 </div>
                 <div className="w-[105px]">
-                  <div className="mb-2 flex justify-between font-mono text-[8px] text-white/25"><span>SMALL</span><span>COMPLEX</span></div>
+                  <div className="mb-2 flex justify-between font-mono text-[8px] text-white/25"><span>QUICK</span><span>EXTENDED</span></div>
                   <div className="flex h-1 gap-1">
                     {["w-1/12", "w-2/12", "w-3/12", "w-4/12"].map((width, index) => <span key={width} className={`${width} ${index === 3 ? "bg-gold/35" : "bg-gold"}`} />)}
                   </div>
