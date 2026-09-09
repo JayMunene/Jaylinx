@@ -55,10 +55,53 @@ export default function PricingPage({
         <div className="mb-12 border-b border-white/8 pb-4">
           <span className="font-mono text-[9px] uppercase text-white/28" style={{ letterSpacing: "0.24em" }}>Investment Guide</span>
         </div>
-        <div className="max-w-[760px]">
-          <h1 className="font-black uppercase leading-[0.9] text-white" style={{ fontSize: "clamp(48px, 7vw, 100px)", letterSpacing: "-0.04em" }}>Clear scope.<br /><span className="text-white/45">Serious work.</span></h1>
-          <div className="my-8 h-[2px] w-[min(100%,220px)] bg-gold" />
-          <p className="max-w-[590px] text-[16px] leading-[1.8] text-white/50">A considered starting point for every engagement. Choose the level of support you need, then we shape the final scope around your business.</p>
+        <div className="grid min-h-[500px] items-start gap-16 lg:grid-cols-[minmax(0,760px)_minmax(300px,1fr)] lg:gap-20">
+          <div className="max-w-[760px]">
+            <h1 className="font-black uppercase leading-[0.9] text-white" style={{ fontSize: "clamp(48px, 7vw, 100px)", letterSpacing: "-0.04em" }}>Clear scope.<br /><span className="text-white/45">Serious work.</span></h1>
+            <div className="my-8 h-[2px] w-[min(100%,220px)] bg-gold" />
+            <p className="max-w-[590px] text-[16px] leading-[1.8] text-white/50">A considered starting point for every engagement. Choose the level of support you need, then we shape the final scope around your business.</p>
+          </div>
+
+          <aside className="relative mt-2 min-h-[410px] border-l border-white/10 pl-7 lg:mt-12" aria-label="Engagement scope overview">
+            <div className="absolute -left-px top-0 h-20 w-px bg-gold" />
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <span className="font-mono text-[9px] uppercase text-white/35" style={{ letterSpacing: "0.2em" }}>Engagement signal</span>
+              <span className="font-mono text-[9px] text-gold">01 / 03</span>
+            </div>
+            <div className="relative py-8">
+              <div className="absolute bottom-8 left-[5px] top-8 w-px bg-gradient-to-b from-gold via-white/20 to-transparent" />
+              {[
+                ["01", "Define", "Need, audience, outcome"],
+                ["02", "Build", "Design, code, review"],
+                ["03", "Launch", "QA, handover, momentum"],
+              ].map(([number, title, detail], index) => (
+                <div key={number} className="relative flex gap-5 pb-9 last:pb-0">
+                  <span className={`relative z-10 flex h-[11px] w-[11px] shrink-0 translate-x-0.5 items-center justify-center border ${index === 0 ? "border-gold bg-gold" : "border-white/35 bg-canvas"}`} />
+                  <div className="-mt-1">
+                    <div className="flex items-baseline gap-3">
+                      <span className="font-mono text-[9px] text-gold/60">{number}</span>
+                      <h2 className="text-[19px] font-semibold text-white">{title}</h2>
+                    </div>
+                    <p className="mt-1 text-[12px] leading-[1.6] text-white/35">{detail}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="border-t border-white/10 pt-5">
+              <div className="flex items-end justify-between">
+                <div>
+                  <div className="font-mono text-[9px] uppercase text-white/28" style={{ letterSpacing: "0.18em" }}>Typical range</div>
+                  <div className="mt-2 font-mono text-[23px] text-white">$19 <span className="text-white/25">—</span> $3.8k+</div>
+                </div>
+                <div className="w-[105px]">
+                  <div className="mb-2 flex justify-between font-mono text-[8px] text-white/25"><span>SMALL</span><span>COMPLEX</span></div>
+                  <div className="flex h-1 gap-1">
+                    {["w-1/12", "w-2/12", "w-3/12", "w-4/12"].map((width, index) => <span key={width} className={`${width} ${index === 3 ? "bg-gold/35" : "bg-gold"}`} />)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
 
         <section className="mt-20">
