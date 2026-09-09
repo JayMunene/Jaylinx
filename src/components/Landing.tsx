@@ -10,8 +10,6 @@ const INSTRUMENTS = [
   { value: "2+", label: "Years in Business" },
 ];
 
-const HERO_IMAGE = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFiVv9lyBRZnckbpV_ByfSzL98tHNGa-rXB6C6g-fUoiGMgJON7-FEJrDw&s=10";
-
 const SERVICES = [
   {
     num: "01",
@@ -268,14 +266,55 @@ export default function Landing({
 
             <div className="relative mx-auto w-full max-w-[520px] lg:justify-self-end">
               <div className="absolute -inset-5 border border-gold/15" aria-hidden />
-              <img
-                src={HERO_IMAGE}
-                alt="Jaylinx Group creative technology work"
-                className="relative aspect-[4/3] w-full object-cover brightness-90 contrast-110 grayscale-[15%]"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute bottom-4 left-4 border border-white/20 bg-canvas/80 px-3 py-2 font-mono text-[9px] uppercase text-gold/75" style={{ letterSpacing: "0.18em" }}>
-                Built for what is next
+              <div className="relative aspect-[4/3] overflow-hidden border border-white/10 bg-[#0a0b0d] p-5 sm:p-7" aria-label="Jaylinx delivery board">
+                <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px)", backgroundSize: "32px 32px" }} aria-hidden />
+                <div className="relative flex h-full flex-col justify-between">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <div className="flex items-center gap-2">
+                      <span className="h-2 w-2 bg-emerald" />
+                      <span className="font-mono text-[9px] uppercase text-white/55" style={{ letterSpacing: "0.18em" }}>Delivery board / 001</span>
+                    </div>
+                    <span className="font-mono text-[9px] text-gold/70">LIVE</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_0.72fr] gap-4 sm:gap-7">
+                    <div className="border border-white/10 bg-black/35 p-4 sm:p-5">
+                      <div className="font-mono text-[8px] uppercase text-white/30" style={{ letterSpacing: "0.2em" }}>Current brief</div>
+                      <div className="mt-5 text-[22px] font-semibold leading-[1.05] text-white sm:text-[28px]">Make the<br /><span className="text-gold">next move.</span></div>
+                      <div className="mt-7 space-y-2">
+                        {["Strategy", "Interface", "Build"].map((item, index) => (
+                          <div key={item} className="flex items-center gap-2 font-mono text-[9px] uppercase text-white/40" style={{ letterSpacing: "0.12em" }}>
+                            <span className={`h-1.5 w-1.5 ${index < 2 ? "bg-gold" : "border border-white/30"}`} />
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex flex-col justify-between border-l border-white/10 pl-4 sm:pl-6">
+                      <div>
+                        <div className="font-mono text-[8px] uppercase text-white/30" style={{ letterSpacing: "0.2em" }}>Signal</div>
+                        <div className="mt-3 font-mono text-[26px] leading-none text-white sm:text-[34px]">02<span className="text-white/25">/</span>08</div>
+                        <div className="mt-2 text-[10px] uppercase text-white/35">Build in motion</div>
+                      </div>
+                      <div className="space-y-3">
+                        {["DISCOVER", "DESIGN", "DELIVER"].map((step, index) => (
+                          <div key={step}>
+                            <div className="mb-1 flex justify-between font-mono text-[7px] text-white/30"><span>{step}</span><span>0{index + 1}</span></div>
+                            <div className="h-1 bg-white/8"><div className={`h-full bg-gold ${index === 0 ? "w-full" : index === 1 ? "w-2/3" : "w-1/3"}`} /></div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-end justify-between border-t border-white/10 pt-4">
+                    <div>
+                      <div className="font-mono text-[8px] uppercase text-white/28" style={{ letterSpacing: "0.18em" }}>Built for what is next</div>
+                      <div className="mt-1 text-[11px] text-white/45">Apps / websites / systems</div>
+                    </div>
+                    <span className="font-mono text-[9px] text-gold/70">JX—01</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
